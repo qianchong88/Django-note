@@ -22,3 +22,5 @@ Window–>Preferences–>PyDev–>interpreters–>Python Interpreter–>Ouick Au
 #5 安装Python的MySQL驱动
 打开命令行输入 pip install mysqldb 安装失败，查资料发现Python3之后的MySQL驱动改为pymysql。
 pip install pymysql 安装成功
+
+开发环境搭建成功
