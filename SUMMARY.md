@@ -6,4 +6,5 @@
   * [第一个Django程序](kai-shi/di-yi-ge-django-cheng-xu.md)
   * [数据库配置](kai-shi/shu-ju-ku-pei-zhi.md)
   * [创建模型](kai-shi/chuang-jian-mo-xing.md)
+  * [玩转API](kai-shi/wan-zhuan-api.md)
 
