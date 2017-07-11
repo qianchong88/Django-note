@@ -31,18 +31,24 @@ myweb/
 
 ### 1.2 使用eclipse集成开发环境创建Django项目
 
-file-&gt;new-project  
+file-&gt;new-project
+
+  
 ![](/assets/1.png)
 
 下一步
 
-![](/assets/2.png)  
 
+
+![](/assets/2.png)
 
 填写项目名称，选择所使用的Python版本，创建src目录并添加到PYTHONPATH变了中。  
 下一步：选择关联项目，没有要关联的项目，直接下一步  
-数据库配置，用的是MySQL，（项目所使用的库myweb需要事先创建）  
-![](/assets/3.png)  
+数据库配置，用的是MySQL，（项目所使用的库myweb需要事先创建）
+
+  
+![](/assets/3.png)
+
 
 
 点击finish第一个Django项目创建成功  
@@ -67,7 +73,9 @@ Performing system checks...
 
 ### 在eclipse中运行
 
-项目目录上右键-&gt;Run as-&gt;pydev:djano  
+项目目录上右键-&gt;Run as-&gt;pydev:djano
+
+  
 ![](/assets/6.png)
 
 第一个Django项目创建成功。
