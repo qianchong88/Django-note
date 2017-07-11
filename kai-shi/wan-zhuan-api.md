@@ -1,4 +1,4 @@
-# 玩转API
+# 玩转API-Django数据库操作
 
 进入Python的交互式shell 体验一下Django提供的database API。在项目目录下执行如下命令
 
@@ -169,4 +169,5 @@ __isnull=True/False
 <Poll: what's old?>
 #返回的是一个Poll对象而不是queryset
 ```
+请求一个不存在的 ID ，这将引发一个异常。
 
