@@ -115,7 +115,7 @@ class Choice(models.Model):
 #相当于sql语句select * from poll where id =1 and question="what's old?"
 ```
 
-SQL缺省的 = 操作符是精确匹配的，可以使用关键字实现其它的条件匹配 \_\_contains包含like '%xxx%'
+SQL缺省的 = 操作符是精确匹配的，可以使用关键字实现其它的条件匹配 __contains包含like '%xxx%'
 
 ```
 >>> Poll.objects.filter(question__contains="ol")
@@ -123,7 +123,7 @@ SQL缺省的 = 操作符是精确匹配的，可以使用关键字实现其它�
 #相当于sql语句select * from poll where question like "%ol%"
 ```
 
-\_\_exac精确等于like 'xxx'
+__exac精确等于like 'xxx'
 
 ```
 >>> Poll.objects.filter(question__exact="ol")
@@ -163,6 +163,7 @@ __day        日期字段的日
  
 __isnull=True/False
 
+
 从数据库中返回一条匹配的结果使用get()方法
 ```
 >>> Poll.objects.get(id=1)
@@ -171,3 +172,4 @@ __isnull=True/False
 ```
 请求一个不存在的 ID ，这将引发一个异常。
 
+选择列values()取出一个Kies values_list()取出多个了列，并生成一个列表
