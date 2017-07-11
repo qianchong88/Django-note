@@ -6,15 +6,13 @@
 
 Django 设置的模块级变量。 更改 DATABASES 中 'default' 中以下键的值，以匹
 
-配数据库连接设置。
+配数据库连接设置。
 
 ENGINE：从 'django.db.backends.postgresql\_psycopg2',
 
 'django.db.backends.mysql', 'django.db.backends.sqlite3',
 
 'django.db.backends.oracle' 中选一个。
-
-
 
 NAME： 数据库名称。如果你使用 SQLite，该数据库将是你计算机上的一个
 
@@ -34,8 +32,6 @@ HOST ： 你的数据库主机地址。如果和你的数据库服务器是同�
 
 请将此处保留为空 \(或者设置为 127.0.0.1\) \( SQLite 下不需要\) 。
 
-
-
 将 TIME\_ZONE 修改为你所在的时区。默认值是美国中央时区（芝加哥）。
 
 配置好后启动Django后报错
@@ -44,7 +40,7 @@ import MySQLdb as Database
 
 ModuleNotFoundError: No module named 'MySQLdb'
 
-网上查资料后，由于django支持的是MySQLdb，PyMySQL是作为停更的MySQLdb支持python3.x，因此需要在项目的\_\__init\_\_.py\(myweb/myweb/\_\_init\_\_.py_\)添加如下设置：
+网上查资料后，由于django支持的是MySQLdb，PyMySQL是作为停更的MySQLdb支持python3.x，因此需要在项目的\_\__init\_\_.py\(myweb/myweb/\_\_init\_\_.py\_\)添加如下设置：
 
 ```
 import pymysql
@@ -56,7 +52,7 @@ pymysql.install_as_MySQLdb()
 
 SQLite 是内置在 Python 中的，因此你不需要安装任何东西来支持你的数据库。
 
-如果你使用 PostgreSQL 或者 MySQL，确保你已经创建了一个数据库。 如果你使用 SQLite ，你不需要事先创建任何东西 - 在需要的时候，将会自动创建数据库文件。
+如果你使用 PostgreSQL 或者 MySQL，确保你已经创建了一个数据库。 如果你使用 SQLite ，你不需要事先创建任何东西 - 在需要的时候，将会自动创建数据库文件。
 
 同时，注意文件底部的 INSTALLED\_APPS 设置。它保存了当前 Django 实例已激
 
@@ -92,8 +88,6 @@ python manage.py syncdb
 python manage.py makemigrations
 python manage.py migrate
 ```
-
-
 
 
 
