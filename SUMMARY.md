@@ -7,4 +7,5 @@
   * [数据库配置](kai-shi/shu-ju-ku-pei-zhi.md)
   * [创建模型](kai-shi/chuang-jian-mo-xing.md)
   * [玩转API-Django数据库操作](kai-shi/wan-zhuan-api.md)
+  * [启用管理后台](kai-shi/djangoshu-ju-ku-cao-zuo-zong-jie.md)
 
