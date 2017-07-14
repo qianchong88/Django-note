@@ -10,4 +10,5 @@
   * [启用管理后台](kai-shi/djangoshu-ju-ku-cao-zuo-zong-jie.md)
   * [编写第一个视图](kai-shi/bian-xie-di-yi-ge-shi-tu.md)
   * [编写带参数的视图](kai-shi/bian-xie-geng-duo-de-shi-tu.md)
+  * [在视图中添加些实际的功能](kai-shi/zai-shi-tu-zhong-tian-jia-xie-shi-ji-de-gong-neng.md)
 
