@@ -66,8 +66,7 @@ url\(\) 参数: regex
 
 regex 是 regular expression 的简写，这是字符串中的模式匹配的一种语法， 在Django 中就是是 url 匹配模式。Django 将请求的 URL 从上至下依次匹配列表中的正则表达式，直到匹配到一个为止。需要注意的是，这些正则表达式不会匹配 GET和 POST 参数，以及域名。 例如：针对 [http://www.example.com/myapp/](http://www.example.com/myapp/) 这一请求，URLconf 将只查找myapp/ 。而在[http://www.example.com/myapp/?page=3](http://www.example.com/myapp/?page=3) 中 URLconf 也仅查找myapp/ 。
 
-**这些正则表达式在 URLconf 模块第一次加载时会被编  
-译。 因此它们速度超快**
+**这些正则表达式在 URLconf 模块第一次加载时会被编译。 因此它们速度超快**
 
 url\(\) 参数： view
 
