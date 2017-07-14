@@ -9,5 +9,5 @@
   * [玩转API-Django数据库操作](kai-shi/wan-zhuan-api.md)
   * [启用管理后台](kai-shi/djangoshu-ju-ku-cao-zuo-zong-jie.md)
   * [编写第一个视图](kai-shi/bian-xie-di-yi-ge-shi-tu.md)
-  * [编写更多的视图](kai-shi/bian-xie-geng-duo-de-shi-tu.md)
+  * [编写带参数的视图](kai-shi/bian-xie-geng-duo-de-shi-tu.md)
 
