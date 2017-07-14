@@ -52,6 +52,6 @@ urlpatterns = [
     url(r'^poll/',include('polls.urls')),
 ]
 ```
-在浏览器中访问http://127.0.0.1:8000/poll/index将看到相同的效果。
+在浏览器中访问http://127.0.0.1:8000/poll/index 将看到相同的效果。
 
 
