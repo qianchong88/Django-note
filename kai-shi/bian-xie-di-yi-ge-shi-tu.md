@@ -59,17 +59,19 @@ urlpatterns = [
 
 在浏览器中访问[http://127.0.0.1:8000/poll/index](http://127.0.0.1:8000/poll/index) 将看到相同的效果。
 
-url\(\) 函数有四个参数，两个必须的： regex 和  view  ， 两个可选的：kwargs  ， 以及  name  。 
+url\(\) 函数有四个参数，两个必须的： regex 和  view  ， 两个可选的：  
+kwargs  ， 以及  name  。
 
-url\(\) 参数: regex   
+url\(\) 参数: regex
 
-regex 是 regular expression 的简写，这是字符串中的模式匹配的一种语法， 在Django 中就是是 url 匹配模式。Django 将请求的 URL 从上至下依次匹配列表中的正则表达式，直到匹配到一个为止。需要注意的是，这些正则表达式不会匹配 GET和 POST 参数，以及域名。 例如：针对 http://www.example.com/myapp/ 这一请求，URLconf 将只查找myapp/ 。而在http://www.example.com/myapp/?page=3 中 URLconf 也仅查找myapp/ 。
+regex 是 regular expression 的简写，这是字符串中的模式匹配的一种语法， 在Django 中就是是 url 匹配模式。Django 将请求的 URL 从上至下依次匹配列表中的正则表达式，直到匹配到一个为止。需要注意的是，这些正则表达式不会匹配 GET和 POST 参数，以及域名。 例如：针对 [http://www.example.com/myapp/](http://www.example.com/myapp/) 这一请求，URLconf 将只查找myapp/ 。而在[http://www.example.com/myapp/?page=3](http://www.example.com/myapp/?page=3) 中 URLconf 也仅查找myapp/ 。
 
-**这些正则表达式在 URLconf 模块第一次加载时会被编译。 因此它们速度超快** 
+**这些正则表达式在 URLconf 模块第一次加载时会被编  
+译。 因此它们速度超快**
 
 url\(\) 参数： view
 
-当 Django 匹配了一个正则表达式就会调用指定的视图功能，包含一个HttpRequest 实例作为第一个参数和正则表达式 “捕获” 的一些值的作为其他参数。
+当 Django 匹配了一个正则表达式就会调用指定的视图功能，包含一个HttpRequest 实例作为第一个参数和正则表达式 “捕获” 的一些值的作为其他参数。
 
 url\(\) 参数： kwargs
 
@@ -77,5 +79,6 @@ url\(\) 参数： kwargs
 
 Django 这一特性。
 
-url\(\) 参数： name命名你的 URL ，让你在 Django 的其他地方明确地引用它，特别是在模板中。 这一强大的功能可允许你通过一个文件就可全局修改项目中的 URL 模式。
+url\(\) 参数： name  
+命名你的 URL ，让你在 Django 的其他地方明确地引用它，特别是在模板中。 这一强大的功能可允许你通过一个文件就可全局修改项目中的 URL 模式。
 
