@@ -61,3 +61,22 @@ def index(request):
     context = {'latest_poll_list': latest_poll_list}
     return render(request, 'polls/index.html', context)
 ```
+
+## 抛出404异常
+
+poll的详细视图显示一个给定 poll的详细问题。 视图代码如下所示
+
+```
+
+def detail(request, poll_id):
+    try:
+        poll = Poll.objects.get(pk=poll_id)
+    except Poll.DoesNotExist:
+        raise Http404
+    return render(request, 'polls/detail.html', {'poll': poll})
+```
+如果请求的poll 的 ID 不存在，该视图将抛出 Http404 异常。给detail视图添加模板新建polls/templates/polls/detail.html文件，写入如下内容
+```
+    {{ question }}
+```
+现在运行http://127.0.0.1:8000/poll/3/将会抛出一个404页面
