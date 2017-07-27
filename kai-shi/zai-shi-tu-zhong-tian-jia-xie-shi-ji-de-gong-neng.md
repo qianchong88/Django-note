@@ -80,3 +80,18 @@ def detail(request, poll_id):
     {{ question }}
 ```
 现在运行http://127.0.0.1:8000/poll/3/将会抛出一个404页面
+
+## 快捷方式: get_object_or_404()
+当使用 get()获取对象时，对象不存在就会抛出 Http404 异常。对
+此 Django 提供了一个快捷操作。如下所示重写 detail() 视图
+
+```
+from django.shortcuts import render, get_object_or_404
+# ...
+def detail(request, poll_id):
+    poll = get_object_or_404(Poll, pk=poll_id)
+    return render(request, 'polls/detail.html', {'poll': poll})
+```
+get_object_or_404() 函数需要一个 Django 模型类作为第一个参数以及 一些关键字参数，它将这些参数传递给模型管理器中的 get() 函数。 若对象不存在时就抛出Http404 异常。
+
+还有个 get_list_or_404() 函数，与 get_object_or_404() 一样 – 不过执行的是filter() 而不是 get() 。若返回的是空列表将抛出 Http404 异常。
