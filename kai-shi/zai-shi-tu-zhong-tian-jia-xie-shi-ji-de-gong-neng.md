@@ -37,8 +37,27 @@ def index(request):
 from django.template import loader,Context
 def index(request):
    latest_poll_list = Poll.objects.order_by('-pub_date')[:5]
-   return render(request,'polls/index.html'{'latest_poll_list':latest_poll_list})
+    template = loader.get_template('polls/index.html')
+    context ={
+        'latest_poll_list': latest_poll_list,
+        }
+    return HttpResponse(template.render(context))
 ```
 浏览器中输入http://127.0.0.1:8000/poll/index
 
 ![](/assets/b2.png)
+
+## 快捷方式: render()
+这是一个非常常见的习惯用语，用于加载模板，填充上下文并返回一个含有模板渲
+染结果的 HttpResponse 对象。 Django 提供了一种快捷方式。这里重写完整的
+index() 视图
+
+```
+
+from django.shortcuts import render
+from polls.models import Poll
+def index(request):
+    latest_poll_list = Poll.objects.all().order_by('-pub_date')[:5]
+    context = {'latest_poll_list': latest_poll_list}
+    return render(request, 'polls/index.html', context)
+```
