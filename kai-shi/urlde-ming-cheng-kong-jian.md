@@ -52,3 +52,4 @@ url(r'^admin/', include(admin.site.urls)),
 <li><a href="{% url 'polls:detail' poll.id %}">{{ poll.question
 }}</a></li>
 ```
+这样就Django就可以准确找到对应的detail视图
