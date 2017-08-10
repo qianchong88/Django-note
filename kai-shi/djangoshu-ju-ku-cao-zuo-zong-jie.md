@@ -43,3 +43,20 @@ admin.site.register(Poll)
 重启开发服务器将会看到管理后台多了刚刚注册的Poll。
 
 ![](/assets/pl.png)
+
+## 忘记管理员密码
+
+在项目目录下运行：Python manage.py shell
+
+
+
+```
+>>> from django.contrib.auth.models import User
+>>> u = User.objects.get(username__exact='john')
+>>> u.set_password('new password')
+>>> u.save()
+```
+
+
+
+密码就被设置成了new password
