@@ -3,6 +3,7 @@
 安装eclipse需要安装配置jdk环境，折腾了好几次因为jdk没有配置好安装不成功
 ## 2 Eclipse安装pydev插件
 ### 安装
+
 在线安装pydev，进入eclipse help–>install new software–>Add
 Name==>pydev 
 Location==>http://pydev.org/updates 
